@@ -74,6 +74,41 @@
       border-left: 4px solid #555;
       border-radius: 8px;
     }
+    form {
+      margin-top: 15px;
+    }
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      padding: 10px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
   </style>
 </head>
 <body>
@@ -81,10 +116,10 @@
 <div class="container">
   <!-- Header -->
   <div class="header">
-    <img src="https://github.com/pranavvvvv29/fullstack/blob/main/20240908_042046987_iOS.jpg?raw=true" alt="Pranav's Profile Picture">
+    <img src="https://github.com/pranavvvvv29/fullstack/blob/main/20240908_042046987_iOS.jpg?raw=true" alt="Profile picture of Pranav R, a tech enthusiast">
     <div>
       <h1>Pranav R</h1>
-      <p>📞 Phone: 9380571874 | ✉️ Email: pranavramesh05@gmail.com</p>
+      <p>📞 Phone: <a href="tel:9380571874">9380571874</a> | ✉ Email: <a href="mailto:pranavramesh05@gmail.com">pranavramesh05@gmail.com</a></p>
       <p>🎂 Date of Birth: 26/11/2005</p>
     </div>
   </div>
@@ -109,10 +144,24 @@
   <!-- Qualifications -->
   <div class="section">
     <div class="section-title">Qualifications</div>
-    <ul>
-      <li>10th Grade: Scored 85%</li>
-      <li>12th Grade: Scored 90%</li>
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Grade</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10th Grade</td>
+          <td>85%</td>
+        </tr>
+        <tr>
+          <td>12th Grade</td>
+          <td>90%</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <!-- Hobbies -->
@@ -122,6 +171,23 @@
       <li>Cricket - An all-rounder with a passion for sportsmanship</li>
       <li>Gaming - Engaged in both strategy and adventure genres</li>
     </ul>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="section">
+    <div class="section-title">Contact Me</div>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </div>
 
